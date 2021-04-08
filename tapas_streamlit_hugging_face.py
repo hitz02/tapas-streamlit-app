@@ -1,21 +1,15 @@
-# import tensorflow.compat.v1 as tf
+
 import os 
-import shutil
 import csv
 import pandas as pd
 import numpy as np
-import IPython
 import streamlit as st
-import subprocess
-from itertools import islice
-import random
 import torch
 from transformers import TapasTokenizer, TapasForQuestionAnswering
 
-# @st.cache(hash_funcs={torch.nn.parameter.Parameter: my_hash_func})
 def load_model():
     print('downloading model')
-    # model_name = 'google/tapas-base-finetuned-wtq'
+    model_name = 'google/tapas-base-finetuned-wtq'
     model = TapasForQuestionAnswering.from_pretrained(model_name)
     tokenizer = TapasTokenizer.from_pretrained(model_name)
     print('model downloaded')
@@ -24,8 +18,6 @@ def load_model():
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
 st.title('Query your Table using TAPAS')
-
-# st.header('Upload CSV file')
 
 uploaded_file = st.file_uploader("Choose your CSV file",type = 'csv')
 
