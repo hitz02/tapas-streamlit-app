@@ -16,8 +16,8 @@ from transformers import TapasTokenizer, TapasForQuestionAnswering
 def load_model():
     print('downloading model')
     # model_name = 'google/tapas-base-finetuned-wtq'
-    model = TapasForQuestionAnswering.from_pretrained("C:\\Users\\Hitesh.Waghela\\tapas-large-finetuned-wtq", local_files_only=True)
-    tokenizer = TapasTokenizer.from_pretrained("C:\\Users\\Hitesh.Waghela\\tapas-large-finetuned-wtq", local_files_only=True)
+    model = TapasForQuestionAnswering.from_pretrained(model_name)
+    tokenizer = TapasTokenizer.from_pretrained(model_name)
     print('model downloaded')
     return model,tokenizer
 
