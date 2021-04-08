@@ -4,7 +4,7 @@ import csv
 import pandas as pd
 import numpy as np
 import streamlit as st
-import torch
+import random
 from transformers import TapasTokenizer, TapasForQuestionAnswering
 
 def load_model():
