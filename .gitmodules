@@ -1,3 +1,0 @@
-[submodule "tapas-base-finetuned-wtq"]
-	path = tapas-base-finetuned-wtq
-	url = https://huggingface.co/google/tapas-base-finetuned-wtq
